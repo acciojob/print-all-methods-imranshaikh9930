@@ -1,6 +1,7 @@
-//your JS code here. If required.
-function allMethods() {
-  //write your code here
+function getAllMethods(object) {
+    return Object.getOwnPropertyNames(object).filter(function(property) {
+        return typeof object[property] == 'function';
+    });
 }
 
-alert(allMethods());
+alert(getAllMethods(Math))
